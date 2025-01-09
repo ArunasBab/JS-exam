@@ -12,3 +12,11 @@ const audi = {
   year: 2005,
   color: "white",
 };
+
+// Funkcija, kuri grąžina visus objekto "key" kaip masyvą
+function showObjectKeys(obj) {
+  return Object.keys(obj);
+}
+
+const keys = showObjectKeys(audi);
+console.log(keys);

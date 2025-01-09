@@ -21,3 +21,21 @@ const users = [
   { id: "8", name: "Simon Peterson", age: 30 },
   { id: "9", name: "Daniel Cane", age: 51 },
 ];
+
+// 1. Funkcija, kuri grąžina visų vartotojų amžiaus vidurkį
+function getUserAverageAge(users) {
+  const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+  const averageAge = totalAge / users.length;
+  return Math.round(averageAge);
+}
+
+// 2. Funkcija, kuri grąžina visų vartotojų vardus
+function getUsersNames(users) {
+  return users.map((user) => user.name);
+}
+
+const averageAge = getUserAverageAge(users);
+console.log("Vidutinio amžiaus vartotojas:", averageAge);
+
+const userNames = getUsersNames(users);
+console.log("Vartotojų vardai:", userNames);
